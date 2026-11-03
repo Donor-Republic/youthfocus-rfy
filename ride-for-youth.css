@@ -1525,6 +1525,41 @@ textarea.form-control { height: auto; }
   .funraisin-page-nav .navbar { gap: 6px 18px; margin: 16px 16px 24px !important; }
 }
 
+/* Account tabs and links on phones */
+@media (max-width: 767px) {
+  .funraisin-page-loggedin-toggle .container { padding: 0 12px !important; }
+  .funraisin-page-loggedin-toggle ul.nav {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    gap: 8px;
+    margin: 0 !important;
+  }
+  .funraisin-page-loggedin-toggle ul.nav > li {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 130px;
+    padding: 20px 0 !important;
+    text-align: center;
+  }
+  .funraisin-page-loggedin-toggle ul.nav > li > a {
+    display: block;
+    padding: 8px 4px !important;
+    font-size: 15px !important;
+    white-space: nowrap;
+  }
+  .funraisin-page-nav { padding-bottom: 16px; }
+  .funraisin-page-nav ul.nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 10px 20px;
+    margin: 0 !important;
+  }
+  .funraisin-page-nav ul.nav > li { margin: 0 !important; padding: 0 !important; }
+  .funraisin-page-nav ul.nav > li > a { padding: 0 !important; font-size: 15px !important; }
+}
+
 /* ===== PART 7 - REGISTRATION (/register) ===== */
 
 /* Hero - navy with the pattern along the top, no grey box (registration and search pages) */
