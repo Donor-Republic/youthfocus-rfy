@@ -1972,7 +1972,9 @@ main .content:has(.logout-redirect) {
   padding: 64px 0 72px !important;
 }
 .content:has(.logout-redirect) .container {
+  width: auto !important;
   max-width: 600px;
+  margin: 0 auto !important;
   padding: 0 24px !important;
 }
 .content:has(.logout-redirect) h1,
