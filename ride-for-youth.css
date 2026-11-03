@@ -1028,6 +1028,117 @@ html #amountdetails .donationHandlers .radio.selected .radio-amount, html #amoun
   font-weight: 600;
 }
 
+/* Team members - Funraisin mobile template, matches the desktop cards */
+.funraisin-page-center #Members .donation {
+  float: none !important;
+  width: 100% !important;
+  max-width: 300px;
+  margin: 0 auto 16px;
+  padding: 0 !important;
+}
+.funraisin-page-center #Members .panel {
+  margin: 0;
+  padding: 0 0 22px !important;
+  border: 1px solid var(--rfy-navy) !important;
+  border-radius: 0 !important;
+  background: #FFFFFF;
+  box-shadow: none !important;
+}
+
+/* Photo - navy-ringed circle */
+.funraisin-page-center #Members .profileimage { padding: 0 !important; }
+.funraisin-page-center #Members .profile-image-frame {
+  width: 102px !important;
+  height: 102px !important;
+  margin: 24px auto 18px;
+  padding: 0 !important;
+  border: 1.5px solid var(--rfy-navy);
+  border-radius: 50%;
+  background: #EEF6FB;
+  overflow: hidden;
+}
+.funraisin-page-center #Members .profile-image-wrapper,
+.funraisin-page-center #Members .profile-image-wrapper a,
+.funraisin-page-center #Members .profile-image-wrapper img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  object-fit: cover;
+}
+
+/* Name */
+.funraisin-page-center #Members .profilename { padding: 0 24px; }
+.funraisin-page-center #Members .profilename h3 {
+  margin: 0 0 20px !important;
+  color: var(--rfy-navy) !important;
+  font: 500 21px/1.25 var(--rfy-font) !important;
+  text-transform: none !important;
+}
+.funraisin-page-center #Members .profilename .col-sm-12,
+.funraisin-page-center #Members .profilename .col-xs-12 {
+  float: none;
+  width: auto;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+}
+.funraisin-page-center #Members .profilename .col-xs-12 { margin: 0 !important; }
+
+/* Progress bar */
+.funraisin-page-center #Members .progress {
+  width: 100% !important;
+  height: 16px;
+  margin: 0;
+  border: 1px solid var(--rfy-navy);
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: none;
+}
+.funraisin-page-center #Members .progress-bar {
+  height: 100%;
+  border-radius: 0;
+  background: #6CB4E4 !important;
+  box-shadow: none;
+}
+
+/* Raised so far + arrow */
+.funraisin-page-center #Members .row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 !important;
+}
+.funraisin-page-center #Members .row::before,
+.funraisin-page-center #Members .row::after { display: none; }
+.funraisin-page-center #Members .row > span { float: none; width: auto; padding: 0; }
+.funraisin-page-center #Members .row br { display: none; }
+.funraisin-page-center #Members .grey-text { display: block; color: var(--rfy-navy) !important; font: 400 14px var(--rfy-font); }
+.funraisin-page-center #Members .grey-text em { font-style: normal; }
+.funraisin-page-center #Members h3.amount {
+  margin: 4px 0 0 !important;
+  color: var(--rfy-navy) !important;
+  font: 500 22px/1.2 var(--rfy-font) !important;
+}
+.funraisin-page-center #Members .btn-tertiary {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  border: 2px solid var(--rfy-navy) !important;
+  border-radius: 50% !important;
+  background: none !important;
+  color: var(--rfy-navy) !important;
+  font-size: 0 !important;
+}
+.funraisin-page-center #Members .btn-tertiary i { display: none; }
+.funraisin-page-center #Members .btn-tertiary::before { content: "\f054"; font: 900 12px "Font Awesome 6 Free"; }
+
+/* "View my Team Page" - a little more space above */
+.funraisin-page-center #Members p.text-center { margin-top: 24px; }
+
 /* Form buttons - full width, same height (colours come from Part 5) */
 .profileSidebar .btn-tertiary, .profileSidebar .btn-primary {
   display: flex !important;
