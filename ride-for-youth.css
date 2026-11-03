@@ -1963,6 +1963,42 @@ textarea.form-control { height: auto; }
   }
 }
 
+/* Already registered - hide the header and give the message room */
+body:has(.logout-redirect) .funraisin-header.header-hero {
+  display: none !important;
+}
+#content-main .content:has(.logout-redirect),
+main .content:has(.logout-redirect) {
+  padding: 64px 0 72px !important;
+}
+.content:has(.logout-redirect) .container {
+  max-width: 600px;
+  padding: 0 24px !important;
+}
+.content:has(.logout-redirect) h1,
+.content:has(.logout-redirect) h2 {
+  margin: 0 0 20px !important;
+  color: var(--rfy-navy) !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+}
+.logout-redirect {
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  #content-main .content:has(.logout-redirect),
+  main .content:has(.logout-redirect) {
+    padding: 48px 0 56px !important;
+  }
+  .content:has(.logout-redirect) h1,
+  .content:has(.logout-redirect) h2 {
+    font-size: 26px !important;
+  }
+}
+
 /* ===== PART 8 - PHONE HEADER (Funraisin mobile template) ===== */
 /* Account links already sit behind the profile photo, so hide the duplicate dropdown */
 .funraisin-header-wrapper > .funraisin-header-nav .LoginDropdown { display: none !important; }
