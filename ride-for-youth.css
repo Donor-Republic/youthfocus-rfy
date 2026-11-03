@@ -1813,6 +1813,22 @@ textarea.form-control { height: auto; }
   font: 900 34px "Font Awesome 6 Free";
 }
 
+/* Phone account menu (slides out from the right) - navy user icon instead of the profile photo */
+.funraisin-page-right .loggedinimage a.lightbox {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+.funraisin-page-right .loggedinimage img.profile-image {
+  display: none !important;
+}
+.funraisin-page-right .loggedinimage a.lightbox::before {
+  content: "\f2bd";
+  color: var(--rfy-navy);
+  font: 900 56px/1 "Font Awesome 6 Free";
+}
+
 /* ===== PART 9 - DASHBOARD (/login/event) ===== */
 
 /* Hero */
