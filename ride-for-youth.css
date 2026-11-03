@@ -1560,6 +1560,17 @@ textarea.form-control { height: auto; }
   .funraisin-page-nav ul.nav > li > a { padding: 0 !important; font-size: 15px !important; }
 }
 
+/* Account links on phones - space before the dashboard boxes */
+@media (max-width: 767px) {
+  .funraisin-page-nav {
+    padding-bottom: 8px !important;
+    margin-bottom: 0 !important;
+  }
+  .dash-features {
+    padding-top: 16px !important;
+  }
+}
+
 /* ===== PART 7 - REGISTRATION (/register) ===== */
 
 /* Hero - navy with the pattern along the top, no grey box (registration and search pages) */
