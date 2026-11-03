@@ -92,6 +92,23 @@ html h5 {
   margin-top: 16px;
 }
 
+/* Join the Ride / Story on phones - less space at the top, text closer to the photo */
+@media (max-width: 767px) {
+  .lump-row.joinridesection {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .lump-row.joinridesection > .container {
+    padding-top: 28px !important;
+    padding-bottom: 32px !important;
+  }
+  /* Text column - whichever column doesn't hold the photo */
+  .lump-row.joinridesection .lump-column:not(:has(.lump-1image)) {
+    margin-top: -20px !important;
+    padding: 0 15px !important;
+  }
+}
+
 /* ===== BANNER (row class "banner") ===== */
 .lump-row.banner {
   position: relative;
