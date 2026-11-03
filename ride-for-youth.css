@@ -17,6 +17,410 @@
   --rfy-font: "Jost", "DM Sans", sans-serif;
 }
 
+/* ===== HEADINGS - one set of sizes and weights for the home page.
+   Sections below only set colour and spacing ===== */
+html h1 {
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+html h2 {
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.15;
+  text-transform: none;
+}
+html h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: none;
+}
+html h4 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: none;
+}
+html h5 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: none;
+}
+
+/* ===== SHARED - heading colour, body text and buttons across the home page sections ===== */
+.howitworks h1,
+.joinridesection h2,
+.joinridesection h3,
+.lump-row.banner h1 {
+  margin: 0 0 16px !important;
+  color: var(--rfy-navy) !important;
+}
+.howitworks h3 {
+  margin: 6px 0 10px !important;
+  color: var(--rfy-navy) !important;
+}
+
+/* Join the Ride and Dakota's Story titles are a lighter weight in the mockup.
+   (They're h3 in Funraisin - once changed to Heading 2, remove "h3" and the font-size here) */
+.joinridesection h2,
+.joinridesection h3 {
+  font-size: 36px;
+  font-weight: 500;
+}
+.howitworks .lump-1col p,
+.joinridesection .lump-1col p {
+  margin: 0;
+  color: #333333;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 1.45 !important;
+}
+.lump-row.banner p.large,
+.lump-row.banner p.large span {
+  font-size: 23px !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+}
+.lump-row.banner .lump-btn,
+.howitworks .lump-btn,
+.joinridesection .lump-btn {
+  padding: 15px 28px !important;
+}
+.joinridesection .lump_buttons {
+  margin-top: 16px;
+}
+
+/* ===== BANNER (row class "banner") ===== */
+.lump-row.banner {
+  position: relative;
+  overflow: hidden;
+  background: var(--rfy-navy) !important;
+}
+.lump-row.banner::before,
+.lump-row.banner::after {
+  display: block !important;
+}
+.lump-row.banner .lump {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.lump-row.banner .lump-1image img {
+  display: block;
+  width: 235px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 44px;
+}
+.lump-row.banner h1 {
+  margin-bottom: 8px !important;
+  color: #FFFFFF !important;
+}
+.lump-row.banner p.large,
+.lump-row.banner p.large span {
+  max-width: 520px;
+  margin: 0 !important;
+  color: #FFFFFF !important;
+}
+.lump-row.banner .lump_buttons {
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+
+@media (min-width: 992px) {
+  .lump-row.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 calc(50% - 72px);
+    background: url(https://d1jubuv78gvhbr.cloudfront.net/fd8dd63f6b7b3b22d4ec8513db13e8eb.png) left 15% / cover no-repeat;
+  }
+  .lump-row.banner > .container {
+    position: relative;
+    z-index: 1;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .lump-row.banner .responsive-padding {
+    min-height: clamp(480px, 41.6vw, 760px) !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .lump-row.banner::after {
+    content: "";
+    aspect-ratio: 1218 / 900;
+    background: url(https://d1jubuv78gvhbr.cloudfront.net/fd8dd63f6b7b3b22d4ec8513db13e8eb.png) center / cover no-repeat;
+  }
+  .lump-row.banner > .container {
+    padding-top: 48px !important;
+    padding-bottom: 40px !important;
+  }
+  .lump-row.banner .responsive-padding {
+    padding: 0 !important;
+  }
+  .lump-row.banner .lump-column {
+    float: none !important;
+    width: 100% !important;
+  }
+  .lump-row.banner .lump-column:not(:has(.lump)) {
+    display: none !important;
+  }
+  .lump-row.banner .lump-1image img {
+    width: 180px;
+    margin-bottom: 32px;
+  }
+}
+
+/* ===== STATS (give the row the class "stats") ===== */
+.stats > .container {
+  padding: 32px 0 !important;
+}
+.stats .responsive-padding {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center !important;
+}
+.stats .lump-column {
+  float: none !important;
+  flex: 0 0 auto;
+  width: auto !important;
+  padding: 0 40px !important;
+}
+.stats h1,
+.stats h4 {
+  margin: 0 !important;
+  color: var(--rfy-navy) !important;
+  text-align: center;
+}
+
+/* ===== HOW IT WORKS (row class "howitworks") ===== */
+.howitworks > .container {
+  padding: 40px 0 !important;
+}
+.howitworks .responsive-padding {
+  align-items: stretch !important;
+}
+.howitworks .lump-column.col-md-4 > .lump-container {
+  height: 100%;
+  padding: 44px 28px 40px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0, 55, 103, 0.12);
+}
+.howitworks .lump-1image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+.howitworks .lump-1col p {
+  color: #5A6672;
+  font-size: 17px !important;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .howitworks .lump-column.col-md-4 {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  .howitworks .lump-column.col-md-4 > .lump-container {
+    padding: 28px 16px;
+  }
+  .howitworks h3 {
+    font-size: 20px !important;
+  }
+  .howitworks .lump-1col p {
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .howitworks .lump-column.col-md-4 {
+    max-width: 400px;
+    margin: 0 auto;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .howitworks .lump-column.col-md-4 > .lump-container {
+    padding: 32px 24px;
+  }
+}
+
+/* ===== JOIN THE RIDE / STORY (row class "joinridesection", photo in either column) ===== */
+.joinridesection .lump-1image img {
+  width: 100%;
+  height: auto;
+}
+.joinridesection .lump_buttons {
+  justify-content: flex-start;
+}
+
+@media (min-width: 992px) {
+  .joinridesection .lump-column:has(.lump-1image) {
+    width: 56%;
+  }
+  .joinridesection .lump-column:not(:has(.lump-1image)) {
+    width: 44%;
+  }
+  .joinridesection .lump-column:has(.lump-1image) + .lump-column {
+    padding-left: 0px !important;
+  }
+  .joinridesection .lump-column:has(+ .lump-column .lump-1image) {
+    padding-right: 0px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .joinridesection .lump-column {
+    float: none !important;
+    width: 100% !important;
+  }
+  .joinridesection .lump-column:has(.lump-1image) {
+    order: -1;
+  }
+  .joinridesection .lump-1image img {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* ===== PHONES ===== */
+@media (max-width: 767px) {
+  html h1,
+  html h2 {
+    font-size: 30px;
+  }
+  html h4 {
+    font-size: 18px;
+  }
+  .joinridesection h2,
+  .joinridesection h3 {
+    font-size: 28px;
+  }
+  .lump-row.banner p.large,
+  .lump-row.banner p.large span {
+    font-size: 18px !important;
+  }
+  .howitworks > .container {
+    padding: 48px 0 !important;
+  }
+  .joinridesection > .container {
+    padding: 40px 0 !important;
+  }
+  .howitworks .lump-1col p,
+  .joinridesection .lump-1col p {
+    font-size: 16px !important;
+  }
+}
+/* ===== PART 11 - LEADERBOARD (lump row with the "leaderboards-section" class) ===== */
+.leaderboards-section > .container { padding: 80px 0 !important; }
+.leaderboards-section .lump-column, .leaderboards-section .lump-1col, .leaderboards-section .lump-column > .lump-container > .lump:not(.lump-tabs) { padding: 0 !important; }
+.leaderboards-section h2 { margin: 0 !important; color: var(--rfy-navy) !important; font: 700 clamp(30px, 3vw, 42px)/1.15 var(--rfy-font) !important; text-align: center; text-transform: none !important; }
+.leaderboards-section .lump-tabs { float: none !important; max-width: 700px; margin: 48px auto 0 !important; padding: 44px 50px 50px !important; background: #FFFFFF; }
+
+/* Tabs - underlined, Organisations hidden */
+.leaderboards-section .nav-tabs { display: flex; justify-content: center; gap: 32px; margin: 0 0 36px !important; padding: 0 !important; border: 0 !important; }
+.leaderboards-section .nav-tabs li { float: none; margin: 0 !important; }
+.leaderboards-section .nav-tabs li:nth-child(3) { display: none; }
+.leaderboards-section .nav-tabs a { min-width: 160px; margin: 0 !important; padding: 8px 12px !important; border: 0 !important; border-bottom: 2px solid #8C99A6 !important; border-radius: 0 !important; background: none !important; color: #5A6672 !important; font: 400 18px var(--rfy-font) !important; text-align: center; }
+.leaderboards-section .nav-tabs .active a { border-bottom-color: var(--rfy-navy) !important; color: var(--rfy-navy) !important; }
+.leaderboards-section .tab-pane { float: none !important; padding: 0 !important; }
+
+/* Rows */
+.leaderboards-section .leaderboardrow { position: relative; margin: 0 !important; padding: 0 !important; border: 0 !important; background: #EEF6FB; }
+.leaderboards-section .leaderboardrow:nth-child(even) { background: #DCEBF7; }
+.leaderboards-section .leaderboardrow > a { display: flex !important; align-items: center; gap: 18px; min-height: 98px; padding: 14px 20px 14px 44px !important; color: var(--rfy-navy) !important; text-decoration: none !important; }
+.leaderboards-section .rank {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 52px !important;
+  height: 52px !important;
+  padding: 5px 0 0 10px !important;
+  background: var(--rfy-navy) !important;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  color: #FFFFFF;
+  font: 400 16px/1 var(--rfy-font);
+  text-align: left;
+}
+.leaderboards-section .profileimage { flex: 0 0 62px; width: 62px !important; margin: 0 !important; padding: 0 !important; }
+.leaderboards-section .profileimage img { width: 62px !important; max-width: none !important; height: 62px; border: 1.5px solid var(--rfy-navy); border-radius: 50%; background: #FFFFFF; object-fit: cover; }
+.leaderboards-section .profilename { flex: 1; min-width: 0; width: auto !important; margin: 0 !important; }
+.leaderboards-section .profilename h4 { margin: 0 !important; color: var(--rfy-navy) !important; font: 500 18px/1.25 var(--rfy-font) !important; text-transform: none !important; }
+.leaderboards-section .raised { flex: 0 0 90px; width: auto !important; margin: 0 !important; text-align: center; }
+.leaderboards-section .raised p, .leaderboards-section .raised h3 { margin: 0 !important; color: var(--rfy-navy) !important; font: 600 16px/1.4 var(--rfy-font) !important; }
+
+/* Donate - the whole row links to the fundraiser's page */
+.leaderboards-section .leaderboardrow > a::after { content: "Donate"; flex: 0 0 130px; padding: 9px 0; border: 2px solid var(--rfy-navy); color: var(--rfy-navy); font: 700 16px var(--rfy-font); letter-spacing: 1.2px; text-align: center; text-transform: uppercase; }
+.leaderboards-section .leaderboardrow > a:hover::after { background: var(--rfy-navy); color: #FFFFFF; }
+
+/* View all (added by the event JS) */
+.leaderboards-section .height-40, .leaderboards-section .lump_leaderboard_buttons { display: none; }
+.leaderboards-section .lb-viewall { margin-top: 36px; text-align: center; }
+.leaderboards-section .lb-viewall .btn { padding: 13px 30px !important; }
+
+@media (max-width: 767px) {
+  .leaderboards-section > .container { padding: 48px 15px !important; }
+  .leaderboards-section .lump-tabs { margin-top: 28px !important; padding: 28px 12px 32px !important; }
+  .leaderboards-section .nav-tabs { gap: 12px; margin-bottom: 24px !important; }
+  .leaderboards-section .nav-tabs a { min-width: 120px; font-size: 16px !important; }
+  .leaderboards-section .leaderboardrow > a { gap: 8px; min-height: 80px; padding: 12px 10px 12px 34px !important; }
+  .leaderboards-section .rank { width: 40px !important; height: 40px !important; padding: 4px 0 0 7px !important; font-size: 13px; }
+  .leaderboards-section .profileimage { flex-basis: 44px; width: 44px !important; }
+  .leaderboards-section .profileimage img { width: 44px !important; height: 44px; }
+  .leaderboards-section .profilename h4 { font-size: 15px !important; }
+  .leaderboards-section .raised { flex-basis: 60px; }
+  .leaderboards-section .raised p, .leaderboards-section .raised h3 { font-size: 13px !important; }
+  .leaderboards-section .leaderboardrow > a::after { flex-basis: 70px; padding: 7px 0; font-size: 12px; letter-spacing: 0.5px; }
+}
+
+/* ===== STATS (row class "stats-section") ===== */
+.stats-section > .container {
+  padding: 60px 0 !important;
+}
+.stats-section .responsive-padding {
+  justify-content: center !important;
+  gap: 160px;
+}
+.stats-section .lump-column {
+  float: none !important;
+  flex: 0 0 auto;
+  width: auto !important;
+  padding: 0 !important;
+}
+.stats-section .lump {
+  padding: 0 !important;
+}
+.stats-section h1 {
+  margin: 0px 0 0 !important;
+  color: var(--rfy-navy) !important;
+  font-size: 52px !important;
+  line-height: 1.1 !important;
+  text-align: center;
+}
+.stats-section h4 {
+  margin: 10px 0 0 !important;
+  color: var(--rfy-navy) !important;
+  font-size: 24px !important;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .stats-section > .container {
+    padding: 28px 0 !important;
+  }
+  .stats-section .responsive-padding {
+    gap: 40px;
+  }
+  .stats-section h1 {
+    font-size: 38px !important;
+  }
+  .stats-section h4 {
+    font-size: 18px !important;
+  }
+}
+
 html #popup .BtClose { border-radius: 50px !important; padding: 0; }
 
 /* Donate and Sign up */
