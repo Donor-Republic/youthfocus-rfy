@@ -2923,20 +2923,18 @@ main .content:has(.logout-redirect) {
     font-size: 17px !important;
   }
 }
-/* Account dropdown (logged in) - trigger */
-.funraisin-secondary-nav .dropdown > a.dropdown-toggle,
-.LoginDropdown > a.dropdown-toggle {
-  display: inline-flex !important;
-  align-items: center;
-  gap: 8px;
-  color: var(--rfy-navy) !important;
-  font: 500 16px var(--rfy-font) !important;
-  text-decoration: none !important;
+
+/* Search page - hide the banner and give the search bar room at the top */
+.template-sponsor .funraisin-header.header-hero {
+  display: none !important;
 }
-.funraisin-secondary-nav .dropdown > a.dropdown-toggle .caret,
-.LoginDropdown > a.dropdown-toggle .caret {
-  border-top-color: var(--rfy-navy) !important;
-  color: var(--rfy-navy) !important;
+.template-sponsor .searchPageWrapper {
+  padding-top: 56px !important;
+}
+@media (max-width: 767px) {
+  .template-sponsor .searchPageWrapper {
+    padding-top: 36px !important;
+  }
 }
 
 /* Account dropdown (logged in) - trigger */
@@ -2953,15 +2951,22 @@ main .content:has(.logout-redirect) {
   color: var(--rfy-navy) !important;
 }
 
-/* Menu panel - sits flush under the name so it stays open */
+/* Menu panel - closed: nothing shows */
 .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu {
   min-width: 210px;
   margin-top: 0 !important;
-  padding: 8px 0 !important;
+  padding: 0 !important;
   border: 0 !important;
-  border-top: 3px solid var(--rfy-red) !important;
   border-radius: 0 !important;
   background: #FFFFFF !important;
+  box-shadow: none !important;
+}
+
+/* Open - red line, padding and shadow only while the menu is showing */
+.funraisin-secondary-nav .funraisin-dropdown-nav:hover .funraisin-dropdown-menu,
+.funraisin-secondary-nav .funraisin-dropdown-nav:focus-within .funraisin-dropdown-menu {
+  padding: 8px 0 !important;
+  border-top: 3px solid var(--rfy-red) !important;
   box-shadow: 0 8px 24px rgba(0, 55, 103, 0.16) !important;
 }
 .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu > li {
@@ -3000,17 +3005,4 @@ html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu >
   margin-top: 6px !important;
   padding-top: 6px !important;
   border-top: 1px solid #DCE6EE;
-}
-
-/* Search page - hide the banner and give the search bar room at the top */
-.template-sponsor .funraisin-header.header-hero {
-  display: none !important;
-}
-.template-sponsor .searchPageWrapper {
-  padding-top: 56px !important;
-}
-@media (max-width: 767px) {
-  .template-sponsor .searchPageWrapper {
-    padding-top: 36px !important;
-  }
 }
