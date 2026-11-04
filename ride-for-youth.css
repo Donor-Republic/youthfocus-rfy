@@ -25,10 +25,13 @@ html h1 {
   line-height: 1.15;
 }
 html h2 {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 900;
   line-height: 1.15;
   text-transform: none;
+}
+html body[role="home"] h2 {
+  font-size: 42px;
 }
 html h3 {
   font-size: 24px;
