@@ -2687,6 +2687,7 @@ main .content:has(.logout-redirect) {
 }
 
 /* ===== DONATE FORM SECTION (row class "donateform") - light brand blue box, amount circles ===== */
+/* ===== DONATE FORM SECTION (row class "donateform") - light brand blue box, amount circles ===== */
 .lump-row.donateform > .container {
   padding-top: 64px !important;
   padding-bottom: 80px !important;
@@ -2702,18 +2703,49 @@ main .content:has(.logout-redirect) {
 }
 .lump-row.donateform .donation-steps { padding: 0 !important; }
 
-/* Step numbers - navy */
+/* Step numbers - centred circles with a line between */
 .lump-row.donateform .donation-form-top,
 .lump-row.donateform .steps-nav {
   justify-content: center;
   margin: 0 0 12px !important;
   padding: 0 !important;
 }
+.lump-row.donateform .steps-nav ul {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 20px !important;
+  padding: 0 !important;
+  list-style: none;
+}
 .lump-row.donateform .steps-nav li {
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 36px !important;
+  height: 36px !important;
+  margin: 0 !important;
+  padding: 0 !important;
   border: 2px solid var(--rfy-navy) !important;
+  border-radius: 50% !important;
   background: #FFFFFF !important;
   color: var(--rfy-navy) !important;
-  font-weight: 700;
+  font: 700 15px/1 var(--rfy-font) !important;
+  opacity: 1 !important;
+  box-sizing: border-box;
+}
+.lump-row.donateform .steps-nav li + li { margin-left: 44px !important; }
+.lump-row.donateform .steps-nav li + li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 6px);
+  width: 32px;
+  height: 2px;
+  background: var(--rfy-navy);
+  opacity: 0.3;
+  transform: translateY(-50%);
 }
 .lump-row.donateform .steps-nav li.active {
   background: var(--rfy-navy) !important;
