@@ -2685,3 +2685,85 @@ main .content:has(.logout-redirect) {
     font-size: 22px;
   }
 }
+
+/* ===== DONATE FORM SECTION (row class "donateform") - matches the fundraiser page form ===== */
+.lump-row.donateform > .container {
+  padding-top: 56px !important;
+  padding-bottom: 72px !important;
+}
+.lump-row.donateform form.lump-donationform {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 32px 28px 36px;
+  border: 1px solid var(--rfy-navy);
+  border-radius: 0;
+  background: #FFFFFF;
+}
+
+/* Step numbers */
+.lump-row.donateform .steps-nav li {
+  border: 2px solid var(--rfy-navy) !important;
+  background: #FFFFFF !important;
+  color: var(--rfy-navy) !important;
+  font-weight: 700;
+}
+.lump-row.donateform .steps-nav li.active {
+  background: var(--rfy-navy) !important;
+  color: #FFFFFF !important;
+}
+
+/* Heading */
+.lump-row.donateform .handles-container h3 {
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  color: var(--rfy-navy) !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+}
+
+/* Amounts - navy-ringed circles in a row */
+.lump-row.donateform .donationHandlers {
+  margin-bottom: 24px !important;
+  padding: 0 !important;
+}
+.lump-row.donateform .donationHandlers > .row {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin: 0 !important;
+}
+.lump-row.donateform .radio-panel {
+  flex: 0 0 auto;
+  width: auto !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+}
+.lump-row.donateform .radio,
+.lump-row.donateform .radio-border,
+.lump-row.donateform .radio-content {
+  width: auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+.lump-row.donateform #amountdetails .radio .radio-amount {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 72px !important;
+  height: 72px !important;
+  padding: 0 !important;
+  border: 2px solid var(--rfy-navy) !important;
+  border-radius: 50% !important;
+  background: #FFFFFF !important;
+  color: var(--rfy-navy) !important;
+  font: 500 18px var(--rfy-font) !important;
+  cursor: pointer;
+}
+.lump-row.donateform #amountdetails .radio.selected .radio-amount,
+.lump-row.donateform #amountdetails .radio:hover .radio-amount {
