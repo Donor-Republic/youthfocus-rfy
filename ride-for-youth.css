@@ -2688,82 +2688,75 @@ main .content:has(.logout-redirect) {
 
 /* ===== DONATE FORM SECTION (row class "donateform") - matches the fundraiser page form ===== */
 .lump-row.donateform > .container {
-  padding-top: 56px !important;
-  padding-bottom: 72px !important;
+  padding-top: 64px !important;
+  padding-bottom: 80px !important;
 }
 .lump-row.donateform form.lump-donationform {
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
-  padding: 32px 28px 36px;
-  border: 1px solid var(--rfy-navy);
-  border-radius: 0;
-  background: #FFFFFF;
-}
-
-/* Step numbers */
-.lump-row.donateform .steps-nav li {
-  border: 2px solid var(--rfy-navy) !important;
-  background: #FFFFFF !important;
-  color: var(--rfy-navy) !important;
-  font-weight: 700;
-}
-.lump-row.donateform .steps-nav li.active {
-  background: var(--rfy-navy) !important;
-  color: #FFFFFF !important;
-}
-
-/* Heading */
-.lump-row.donateform .handles-container h3 {
-  margin: 0 0 8px !important;
-  padding: 0 !important;
-  color: var(--rfy-navy) !important;
-  font-size: 22px !important;
-  font-weight: 700 !important;
-  text-transform: none !important;
-}
-
-/* Amounts - navy-ringed circles in a row */
-.lump-row.donateform .donationHandlers {
-  margin-bottom: 24px !important;
-  padding: 0 !important;
-}
-.lump-row.donateform .donationHandlers > .row {
-  display: flex !important;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
-  margin: 0 !important;
-}
-.lump-row.donateform .radio-panel {
-  flex: 0 0 auto;
-  width: auto !important;
-  min-width: 0 !important;
-  padding: 0 !important;
-}
-.lump-row.donateform .radio,
-.lump-row.donateform .radio-border,
-.lump-row.donateform .radio-content {
-  width: auto !important;
-  min-width: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  padding: 56px 64px 64px !important;
   border: 0 !important;
-  background: none !important;
+  border-radius: 0 !important;
+  background: #CBE4F4 !important;
   box-shadow: none !important;
 }
-.lump-row.donateform #amountdetails .radio .radio-amount {
-  display: flex !important;
-  align-items: center;
+.lump-row.donateform .donation-form-top,
+.lump-row.donateform .steps-nav {
   justify-content: center;
-  width: 72px !important;
-  height: 72px !important;
+  margin: 0 0 12px !important;
   padding: 0 !important;
-  border: 2px solid var(--rfy-navy) !important;
-  border-radius: 50% !important;
-  background: #FFFFFF !important;
-  color: var(--rfy-navy) !important;
-  font: 500 18px var(--rfy-font) !important;
-  cursor: pointer;
 }
-.lump-row.donateform #amountdetails .radio.selected .radio-amount,
-.lump-row.donateform #amountdetails .radio:hover .radio-amount {
+.lump-row.donateform .donation-steps { padding: 0 !important; }
+.lump-row.donateform .handles-container h3 {
+  margin: 0 0 28px !important;
+  font-size: 24px !important;
+}
+
+/* Circles - one centred row */
+.lump-row.donateform .donationHandlers,
+.lump-row.donateform .donationHandlers > .row {
+  float: none !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
+}
+.lump-row.donateform .donationHandlers { margin-bottom: 32px !important; }
+.lump-row.donateform .donationHandlers > .row {
+  justify-content: center !important;
+  gap: 16px;
+}
+.lump-row.donateform .radio-content { justify-content: center; }
+
+/* Other amount - brand navy "$" box */
+.lump-row.donateform .input-group .input-group-addon,
+.lump-row.donateform .input-group .input-group-addon.white {
+  justify-content: center;
+  min-width: 46px;
+  border: 1px solid var(--rfy-navy) !important;
+  border-radius: 0 !important;
+  background: var(--rfy-navy) !important;
+  color: #FFFFFF !important;
+  font-size: 18px !important;
+}
+.lump-row.donateform .other-amount .form-control {
+  border-left: 0 !important;
+  background: #FFFFFF !important;
+  font-size: 16px !important;
+}
+.lump-row.donateform .handles-container > .container,
+.lump-row.donateform .container:has(> .btn-next) { max-width: 100% !important; }
+.lump-row.donateform .other-amount { padding-bottom: 20px !important; }
+
+/* Phones */
+@media (max-width: 767px) {
+  .lump-row.donateform > .container { padding: 32px 16px 48px !important; }
+  .lump-row.donateform form.lump-donationform { padding: 36px 16px 40px !important; }
+  .lump-row.donateform .handles-container h3 {
+    margin-bottom: 20px !important;
+    font-size: 20px !important;
+  }
+  .lump-row.donateform .donationHandlers { margin-bottom: 24px !important; }
+  .lump-row.donateform .donationHandlers > .row { gap: 10px; }
+}
