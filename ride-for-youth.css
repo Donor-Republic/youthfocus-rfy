@@ -2939,12 +2939,24 @@ main .content:has(.logout-redirect) {
   color: var(--rfy-navy) !important;
 }
 
-/* Account dropdown - menu panel */
-.funraisin-secondary-nav .dropdown-menu,
-.LoginDropdown .dropdown-menu,
-.LoginDropdown .funraisin-dropdown-menu {
+/* Account dropdown (logged in) - trigger */
+.funraisin-secondary-nav .funraisin-dropdown-nav > a.dropdown-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  color: var(--rfy-navy) !important;
+  font: 500 16px var(--rfy-font) !important;
+  text-decoration: none !important;
+}
+.funraisin-secondary-nav .funraisin-dropdown-nav > a.dropdown-toggle .caret {
+  border-top-color: var(--rfy-navy) !important;
+  color: var(--rfy-navy) !important;
+}
+
+/* Menu panel - sits flush under the name so it stays open */
+.funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu {
   min-width: 210px;
-  margin-top: 10px !important;
+  margin-top: 0 !important;
   padding: 8px 0 !important;
   border: 0 !important;
   border-top: 3px solid var(--rfy-red) !important;
@@ -2952,19 +2964,15 @@ main .content:has(.logout-redirect) {
   background: #FFFFFF !important;
   box-shadow: 0 8px 24px rgba(0, 55, 103, 0.16) !important;
 }
-.funraisin-secondary-nav .dropdown-menu > li,
-.LoginDropdown .dropdown-menu > li,
-.LoginDropdown .funraisin-dropdown-menu > li {
+.funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu > li {
   display: block !important;
   margin: 0 !important;
   padding: 0 !important;
   background: none !important;
 }
 
-/* Account dropdown - links */
-html .funraisin-secondary-nav .dropdown-menu > li > a,
-html .LoginDropdown .dropdown-menu > li > a,
-html .LoginDropdown .funraisin-dropdown-menu > li > a {
+/* Links */
+html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu > li > a {
   display: block !important;
   padding: 11px 22px !important;
   border-left: 3px solid transparent !important;
@@ -2977,27 +2985,18 @@ html .LoginDropdown .funraisin-dropdown-menu > li > a {
 }
 
 /* Hover and keyboard focus - light brand blue, red bar, navy text */
-html .funraisin-secondary-nav .dropdown-menu > li:hover,
-html .LoginDropdown .dropdown-menu > li:hover,
-html .LoginDropdown .funraisin-dropdown-menu > li:hover {
+html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu > li:hover {
   background: none !important;
 }
-html .funraisin-secondary-nav .dropdown-menu > li > a:hover,
-html .funraisin-secondary-nav .dropdown-menu > li > a:focus,
-html .funraisin-secondary-nav .dropdown-menu > li.active > a,
-html .LoginDropdown .dropdown-menu > li > a:hover,
-html .LoginDropdown .dropdown-menu > li > a:focus,
-html .LoginDropdown .funraisin-dropdown-menu > li > a:hover,
-html .LoginDropdown .funraisin-dropdown-menu > li > a:focus {
+html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu > li > a:hover,
+html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu > li > a:focus {
   border-left-color: var(--rfy-red) !important;
   background: #EEF6FB !important;
   color: var(--rfy-navy) !important;
 }
 
 /* Logout - thin divider above */
-.funraisin-secondary-nav .dropdown-menu > li:last-child,
-.LoginDropdown .dropdown-menu > li:last-child,
-.LoginDropdown .funraisin-dropdown-menu > li:last-child {
+.funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu > li:last-child {
   margin-top: 6px !important;
   padding-top: 6px !important;
   border-top: 1px solid #DCE6EE;
