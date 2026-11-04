@@ -16,6 +16,9 @@
   --rfy-focus: #F2B705;
   --rfy-font: "Jost", "DM Sans", sans-serif;
 }
+html .input-group-btn .btn {
+   height: 40px;
+}
 
 /* ===== HEADINGS - one set of sizes and weights for the home page.
    Sections below only set colour and spacing ===== */
@@ -3006,3 +3009,4 @@ html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu >
   padding-top: 6px !important;
   border-top: 1px solid #DCE6EE;
 }
+
