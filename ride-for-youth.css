@@ -66,9 +66,9 @@ html h5 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 480px;
+  min-height: 300px;
   padding-top: 0 !important;
-  padding-bottom: 72px !important;
+  padding-bottom: 48px !important;
 }
 .lump-row.bannerstrip-section .lump-column,
 .lump-row.bannerstrip-section .lump {
@@ -79,11 +79,13 @@ html h5 {
 html .lump-row.bannerstrip-section h1 {
   text-align: left !important;
 }
+
+/* Same font and weight as the home page headings */
 html .lump-row.bannerstrip-section h1 {
   margin: 0 !important;
   color: #FFFFFF !important;
-  font-size: 64px;
-  font-weight: 700;
+  font-size: 56px;
+  font-weight: 900;
   line-height: 1;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -92,28 +94,28 @@ html .lump-row.bannerstrip-section h1 {
 /* Laptops */
 @media (max-width: 1199px) {
   .lump-row.bannerstrip-section > .container {
-    min-height: 400px;
-    padding-bottom: 60px !important;
+    min-height: 260px;
+    padding-bottom: 40px !important;
   }
-  html .lump-row.bannerstrip-section h1 { font-size: 54px; }
+  html .lump-row.bannerstrip-section h1 { font-size: 48px; }
 }
 
 /* Tablets */
 @media (max-width: 991px) {
   .lump-row.bannerstrip-section > .container {
-    min-height: 320px;
-    padding-bottom: 48px !important;
+    min-height: 220px;
+    padding-bottom: 36px !important;
   }
-  html .lump-row.bannerstrip-section h1 { font-size: 46px; }
+  html .lump-row.bannerstrip-section h1 { font-size: 42px; }
 }
 
 /* Phones */
 @media (max-width: 767px) {
   .lump-row.bannerstrip-section > .container {
-    min-height: 220px;
-    padding-bottom: 32px !important;
+    min-height: 160px;
+    padding-bottom: 28px !important;
   }
-  html .lump-row.bannerstrip-section h1 { font-size: 34px; }
+  html .lump-row.bannerstrip-section h1 { font-size: 32px; }
 }
 
 /* ===== SHARED - heading colour, body text and buttons across the home page sections ===== */
