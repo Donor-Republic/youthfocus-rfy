@@ -24,7 +24,7 @@ html h1 {
   font-weight: 900;
   line-height: 1.15;
 }
-html h2 {
+html h2, .content h2 {
   font-size: 36px;
   font-weight: 900;
   line-height: 1.15;
