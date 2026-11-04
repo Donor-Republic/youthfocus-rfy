@@ -20,6 +20,10 @@ html .input-group-btn .btn {
    height: 40px;
 }
 
+.template-register .header-hero {
+   display: none !important;
+}
+
 /* ===== HEADINGS - one set of sizes and weights for the home page.
    Sections below only set colour and spacing ===== */
 html h1 {
