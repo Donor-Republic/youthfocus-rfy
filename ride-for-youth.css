@@ -2686,7 +2686,7 @@ main .content:has(.logout-redirect) {
   }
 }
 
-/* ===== DONATE FORM SECTION (row class "donateform") - matches the fundraiser page form ===== */
+/* ===== DONATE FORM SECTION (row class "donateform") - light brand blue box, amount circles ===== */
 .lump-row.donateform > .container {
   padding-top: 64px !important;
   padding-bottom: 80px !important;
@@ -2700,19 +2700,40 @@ main .content:has(.logout-redirect) {
   background: #CBE4F4 !important;
   box-shadow: none !important;
 }
+.lump-row.donateform .donation-steps { padding: 0 !important; }
+
+/* Step numbers - navy */
 .lump-row.donateform .donation-form-top,
 .lump-row.donateform .steps-nav {
   justify-content: center;
   margin: 0 0 12px !important;
   padding: 0 !important;
 }
-.lump-row.donateform .donation-steps { padding: 0 !important; }
-.lump-row.donateform .handles-container h3 {
-  margin: 0 0 28px !important;
-  font-size: 24px !important;
+.lump-row.donateform .steps-nav li {
+  border: 2px solid var(--rfy-navy) !important;
+  background: #FFFFFF !important;
+  color: var(--rfy-navy) !important;
+  font-weight: 700;
+}
+.lump-row.donateform .steps-nav li.active {
+  background: var(--rfy-navy) !important;
+  color: #FFFFFF !important;
 }
 
-/* Circles - one centred row */
+/* Headings */
+.lump-row.donateform h3,
+.lump-row.donateform h4 {
+  color: var(--rfy-navy) !important;
+  text-transform: none !important;
+}
+.lump-row.donateform .handles-container h3 {
+  margin: 0 0 28px !important;
+  padding: 0 !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+}
+
+/* Amounts - one centred row of circles */
 .lump-row.donateform .donationHandlers,
 .lump-row.donateform .donationHandlers > .row {
   float: none !important;
@@ -2724,32 +2745,136 @@ main .content:has(.logout-redirect) {
 }
 .lump-row.donateform .donationHandlers { margin-bottom: 32px !important; }
 .lump-row.donateform .donationHandlers > .row {
+  display: flex !important;
+  flex-wrap: wrap;
   justify-content: center !important;
   gap: 16px;
 }
+.lump-row.donateform .radio-panel {
+  flex: 0 0 auto;
+  width: auto !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+}
+.lump-row.donateform .radio,
+.lump-row.donateform .radio-border,
+.lump-row.donateform .radio-content {
+  width: auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+}
 .lump-row.donateform .radio-content { justify-content: center; }
 
-/* Other amount - brand navy "$" box */
+/* Funraisin fades the other amounts once one is picked - keep them all solid */
+.lump-row.donateform .radio { opacity: 1 !important; }
+.lump-row.donateform #amountdetails .radio .radio-amount {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 72px;
+  width: 72px !important;
+  height: 72px !important;
+  padding: 0 !important;
+  border: 2px solid var(--rfy-navy) !important;
+  border-radius: 50% !important;
+  background: #FFFFFF !important;
+  color: var(--rfy-navy) !important;
+  font: 500 18px var(--rfy-font) !important;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.lump-row.donateform #amountdetails .radio.selected .radio-amount,
+.lump-row.donateform #amountdetails .radio:hover .radio-amount {
+  background: var(--rfy-navy) !important;
+  color: #FFFFFF !important;
+}
+
+/* Other amount and button - same width, centred */
+.lump-row.donateform .handles-container > .container,
+.lump-row.donateform .container:has(> .btn-next) {
+  width: auto !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.lump-row.donateform .other-amount {
+  margin: 0 !important;
+  padding-bottom: 20px !important;
+}
+.lump-row.donateform .other-amount > div { padding: 0 !important; }
+
+/* Fields - white, square, navy outline (all three steps) */
+.lump-row.donateform .input-group {
+  display: flex !important;
+  width: 100%;
+}
 .lump-row.donateform .input-group .input-group-addon,
 .lump-row.donateform .input-group .input-group-addon.white {
+  display: flex !important;
+  align-items: center;
   justify-content: center;
+  width: auto !important;
   min-width: 46px;
+  padding: 0 14px !important;
   border: 1px solid var(--rfy-navy) !important;
   border-radius: 0 !important;
   background: var(--rfy-navy) !important;
   color: #FFFFFF !important;
   font-size: 18px !important;
 }
-.lump-row.donateform .other-amount .form-control {
-  border-left: 0 !important;
+.lump-row.donateform .form-control {
+  height: 46px;
+  border: 1px solid var(--rfy-navy) !important;
+  border-radius: 0 !important;
   background: #FFFFFF !important;
+  box-shadow: none !important;
   font-size: 16px !important;
 }
-.lump-row.donateform .handles-container > .container,
-.lump-row.donateform .container:has(> .btn-next) { max-width: 100% !important; }
-.lump-row.donateform .other-amount { padding-bottom: 20px !important; }
+.lump-row.donateform .other-amount .form-control { border-left: 0 !important; }
+.lump-row.donateform .form-control:focus {
+  border-color: var(--rfy-navy) !important;
+  outline: 2px solid var(--rfy-focus);
+  outline-offset: 1px;
+}
+.lump-row.donateform label {
+  color: var(--rfy-navy);
+  font: 500 14px var(--rfy-font);
+  text-transform: none !important;
+}
 
-/* Phones */
+/* Buttons - text centred, back arrow as a navy outline square */
+.lump-row.donateform .btn-next,
+.lump-row.donateform .btn-primary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 50px;
+  padding: 0 !important;
+}
+.lump-row.donateform .btn-next span,
+.lump-row.donateform .btn-primary span {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+}
+.lump-row.donateform .btn-back {
+  height: 50px;
+  border: 2px solid var(--rfy-navy) !important;
+  border-radius: 0 !important;
+  background: #FFFFFF !important;
+  color: var(--rfy-navy) !important;
+}
+.lump-row.donateform .btn-back:hover {
+  background: var(--rfy-navy) !important;
+  color: #FFFFFF !important;
+}
+
+/* Phones - all four circles on one row */
 @media (max-width: 767px) {
   .lump-row.donateform > .container { padding: 32px 16px 48px !important; }
   .lump-row.donateform form.lump-donationform { padding: 36px 16px 40px !important; }
@@ -2759,4 +2884,10 @@ main .content:has(.logout-redirect) {
   }
   .lump-row.donateform .donationHandlers { margin-bottom: 24px !important; }
   .lump-row.donateform .donationHandlers > .row { gap: 10px; }
+  .lump-row.donateform #amountdetails .radio .radio-amount {
+    flex: 0 0 64px;
+    width: 64px !important;
+    height: 64px !important;
+    font-size: 17px !important;
+  }
 }
