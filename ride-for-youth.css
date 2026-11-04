@@ -49,6 +49,73 @@ html h5 {
   text-transform: none;
 }
 
+/* ===== BANNER STRIP (row class "bannerstrip-section") - navy pattern banner, large heading bottom left ===== */
+.lump-row.bannerstrip-section {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 0 !important;
+  background-color: var(--rfy-navy) !important;
+  background-image: url("https://d1jubuv78gvhbr.cloudfront.net/9cb27b2df70076634e8eb333d0ab77e9.jpg") !important;
+  background-position: center top !important;
+  background-size: max(100%, 1200px) auto !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Heading sits at the bottom of the banner, lined up with the page content */
+.lump-row.bannerstrip-section > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 480px;
+  padding-top: 0 !important;
+  padding-bottom: 72px !important;
+}
+.lump-row.bannerstrip-section .lump-column,
+.lump-row.bannerstrip-section .lump {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.lump-row.bannerstrip-section .lump-1col,
+html .lump-row.bannerstrip-section h1 {
+  text-align: left !important;
+}
+html .lump-row.bannerstrip-section h1 {
+  margin: 0 !important;
+  color: #FFFFFF !important;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Laptops */
+@media (max-width: 1199px) {
+  .lump-row.bannerstrip-section > .container {
+    min-height: 400px;
+    padding-bottom: 60px !important;
+  }
+  html .lump-row.bannerstrip-section h1 { font-size: 54px; }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+  .lump-row.bannerstrip-section > .container {
+    min-height: 320px;
+    padding-bottom: 48px !important;
+  }
+  html .lump-row.bannerstrip-section h1 { font-size: 46px; }
+}
+
+/* Phones */
+@media (max-width: 767px) {
+  .lump-row.bannerstrip-section > .container {
+    min-height: 220px;
+    padding-bottom: 32px !important;
+  }
+  html .lump-row.bannerstrip-section h1 { font-size: 34px; }
+}
+
 /* ===== SHARED - heading colour, body text and buttons across the home page sections ===== */
 .howitworks h1,
 .joinridesection h2,
