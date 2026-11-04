@@ -24,6 +24,10 @@ html .input-group-btn .btn {
    display: none !important;
 }
 
+#popup > div > div > div.col-sm-4.bg-primary.popup-col.pt40.pb40.pl40.pr20 > h2 {
+   color: #fff;
+}
+
 /* ===== HEADINGS - one set of sizes and weights for the home page.
    Sections below only set colour and spacing ===== */
 html h1 {
