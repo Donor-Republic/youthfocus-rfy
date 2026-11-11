@@ -20,6 +20,13 @@ html .input-group-btn .btn {
    height: 40px;
 }
 
+/* Dashboard (replaces Sign up once logged in) - grow to fit, same side space as Sign up */
+.funraisin-desktop-nav .funraisin-secondary-nav a.btn-primary.rfy-dashboard-btn {
+  width: auto;
+  min-width: 126px;
+  padding: 0 24px !important;
+}
+
 .template-register .header-hero {
    display: none !important;
 }
