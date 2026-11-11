@@ -3123,3 +3123,18 @@ html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu >
 @media (max-width: 767px) {
   .container:has(> .col-md-6 #activity_from) { grid-template-columns: 1fr; }
 }
+/* Registration - hide the waiver text box (the T&Cs link replaces it) */
+#terms-panel {
+  display: none !important;
+}
+
+/* Terms link in the checkbox label */
+.rfy-terms-link {
+  color: var(--rfy-navy) !important;
+  font-weight: 600;
+  text-decoration: underline !important;
+}
+.rfy-terms-link:hover,
+.rfy-terms-link:focus {
+  color: var(--rfy-red) !important;
+}
