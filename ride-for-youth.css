@@ -3018,3 +3018,108 @@ html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu >
   border-top: 1px solid #DCE6EE;
 }
 
+/* ===== MY FITNESS ACTIVITY (/login/activity) - Add Activity form ===== */
+
+/* Steps isn't used - hide it (desktop and phone) */
+.form-group:has(input[name="steps"]) { display: none !important; }
+
+/* Desktop - two even columns: Date | Distance, Activity type | Duration */
+.container:has(> .col-md-6 #activity_from) {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 32px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.container:has(> .col-md-6 #activity_from) > *:not(.col-md-6) { grid-column: 1 / -1; }
+.container:has(> .col-md-6 #activity_from) > .col-md-6 { display: contents; }
+.container:has(> .col-md-6 #activity_from) > .clear { display: none; }
+.container:has(> .col-md-6 #activity_from) > h3 { color: var(--rfy-navy) !important; }
+.container:has(> .col-md-6 #activity_from) > p {
+  max-width: 640px;
+  margin: 0 auto 28px;
+}
+
+/* Each field - label above, full width (desktop and phone) */
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .form-group {
+  margin: 0 0 22px !important;
+}
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .form-group > label {
+  display: block;
+  float: none !important;
+  width: auto !important;
+  padding: 0 0 8px !important;
+  color: var(--rfy-navy);
+  font: 500 15px var(--rfy-font);
+  text-align: left;
+}
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .form-group > div {
+  float: none !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Inputs - white, square, navy outline */
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .form-control {
+  width: 100% !important;
+  height: 46px !important;
+  border: 1px solid var(--rfy-navy) !important;
+  border-radius: 0 !important;
+  background: #FFFFFF !important;
+  box-shadow: none !important;
+  color: var(--rfy-navy) !important;
+  font-size: 16px !important;
+}
+
+/* Activity type dropdown - one border, not two */
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .bootstrap-select.form-control {
+  height: auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: none !important;
+}
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .bootstrap-select > .dropdown-toggle {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  height: 46px !important;
+  padding: 0 14px !important;
+  border: 1px solid var(--rfy-navy) !important;
+  outline: none !important;
+}
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .bootstrap-select > .dropdown-toggle .caret {
+  border-top-color: var(--rfy-navy) !important;
+}
+
+/* Dropdown list - matches the site menus */
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .bootstrap-select .dropdown-menu {
+  margin-top: -1px !important;
+  padding: 0 !important;
+  border: 1px solid var(--rfy-navy) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 8px 24px rgba(0, 55, 103, 0.16) !important;
+}
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .bootstrap-select .dropdown-menu li a {
+  padding: 11px 14px !important;
+  outline: none !important;
+  color: var(--rfy-navy) !important;
+  font: 400 16px var(--rfy-font) !important;
+}
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .bootstrap-select .dropdown-menu li.selected a,
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .bootstrap-select .dropdown-menu li a:hover,
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .bootstrap-select .dropdown-menu li a:focus {
+  background: #EEF6FB !important;
+  color: var(--rfy-navy) !important;
+}
+
+/* Keyboard focus */
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .form-control:focus,
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .bootstrap-select > .dropdown-toggle:focus {
+  outline: 2px solid var(--rfy-focus) !important;
+  outline-offset: 1px;
+}
+
+/* Phones - one column */
+@media (max-width: 767px) {
+  .container:has(> .col-md-6 #activity_from) { grid-template-columns: 1fr; }
+}
