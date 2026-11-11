@@ -3123,18 +3123,41 @@ html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu >
 @media (max-width: 767px) {
   .container:has(> .col-md-6 #activity_from) { grid-template-columns: 1fr; }
 }
-/* Registration - hide the waiver text box (the T&Cs link replaces it) */
+
+/* Registration - hide the waiver text box, keep the checkbox */
 #terms-panel {
   display: none !important;
 }
 
-/* Terms link in the checkbox label */
-.rfy-terms-link {
+/* Checkbox row - box and text lined up */
+.terms-panel .bottom .row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 !important;
+}
+.terms-panel .bottom .row input[type="checkbox"] {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  accent-color: var(--rfy-navy);
+}
+.terms-panel .rfy-terms-label {
+  margin: 0;
+  color: #333333;
+  font: 400 16px/1.4 var(--rfy-font);
+  text-transform: none;
+  cursor: pointer;
+}
+
+/* Terms and Conditions link */
+.rfy-terms-label a {
   color: var(--rfy-navy) !important;
   font-weight: 600;
   text-decoration: underline !important;
 }
-.rfy-terms-link:hover,
-.rfy-terms-link:focus {
+.rfy-terms-label a:hover,
+.rfy-terms-label a:focus {
   color: var(--rfy-red) !important;
 }
