@@ -2968,6 +2968,21 @@ main .content:has(.logout-redirect) {
   display: none !important;
 }
 
+/* Account dropdown - drop the menu below the Sign Up button, with a gap */
+.funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu {
+  top: 50px !important;
+}
+
+/* Invisible bridge over the gap so the menu stays open while the mouse moves down */
+.funraisin-secondary-nav .funraisin-dropdown-nav::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 26px;
+}
+
 /* Fundraiser menu (My fundraising, My team, My account, Messages, Logout) - hover to match */
 html .funraisin-secondary-nav .LoggedInNavOptions li > a {
   border-left: 3px solid transparent !important;
