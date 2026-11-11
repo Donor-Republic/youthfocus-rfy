@@ -3154,6 +3154,26 @@ html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu >
   color: var(--rfy-navy) !important;
 }
 
+/* Activity type - keep the hidden native select tucked away so the styled list opens under the field */
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .bootstrap-select > select.form-control {
+  position: absolute !important;
+  bottom: 0;
+  left: 50% !important;
+  width: 0.5px !important;
+  height: 100% !important;
+  padding: 0 !important;
+  border: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+/* Touch devices use the phone's own picker - stretch the select over the whole field so it opens in the right spot */
+:is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .bootstrap-select.mobile-device > select.form-control {
+  top: 0;
+  left: 0 !important;
+  width: 100% !important;
+  pointer-events: auto;
+}
+
 /* Keyboard focus */
 :is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .form-control:focus,
 :is(.container:has(> .col-md-6 #activity_from), .addactivity-block) .bootstrap-select > .dropdown-toggle:focus {
