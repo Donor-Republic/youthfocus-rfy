@@ -3286,3 +3286,34 @@ html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu >
     font-size: 14px !important;
   }
 }
+/* ===== ANIMATION - gentle lift on cards when hovered (scroll reveals and count-up are in the event JS) ===== */
+/* Uses "translate" rather than "transform" so it doesn't clash with the scroll-in animation */
+.dash-box,
+#Donors .panel,
+#MembersBlock .panel,
+.template-sponsor #Members .panel,
+.lump-assets .asset-block img {
+  transition: translate 0.2s ease, box-shadow 0.2s ease;
+}
+@media (hover: hover) {
+  .dash-box:hover,
+  #Donors .donation:hover .panel,
+  #MembersBlock .member:hover .panel,
+  .template-sponsor #Members .member:hover .panel,
+  .lump-assets .asset-block:hover img {
+    translate: 0 -4px;
+    box-shadow: 0 10px 24px rgba(0, 55, 103, 0.15) !important;
+  }
+}
+
+/* People who've asked for less motion - no lift */
+@media (prefers-reduced-motion: reduce) {
+  .dash-box,
+  #Donors .panel,
+  #MembersBlock .panel,
+  .template-sponsor #Members .panel,
+  .lump-assets .asset-block img {
+    transition: none;
+    translate: none !important;
+  }
+}
