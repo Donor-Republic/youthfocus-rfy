@@ -2962,6 +2962,33 @@ main .content:has(.logout-redirect) {
   color: var(--rfy-navy) !important;
 }
 
+/* Account dropdown - remove the little arrow at the top */
+.funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu::before,
+.funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu::after {
+  display: none !important;
+}
+
+/* Fundraiser menu (My fundraising, My team, My account, Messages, Logout) - hover to match */
+html .funraisin-secondary-nav .LoggedInNavOptions li > a {
+  border-left: 3px solid transparent !important;
+  background: none !important;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+html .funraisin-secondary-nav .LoggedInNavOptions li:hover,
+html .funraisin-secondary-nav .LoggedInNavOptions li.active {
+  background: none !important;
+}
+html .funraisin-secondary-nav .LoggedInNavOptions li > a:hover,
+html .funraisin-secondary-nav .LoggedInNavOptions li > a:focus {
+  border-left-color: var(--rfy-red) !important;
+  background: #EEF6FB !important;
+  color: var(--rfy-navy) !important;
+}
+html .funraisin-secondary-nav .LoggedInNavOptions li > a:hover i,
+html .funraisin-secondary-nav .LoggedInNavOptions li > a:focus i {
+  color: var(--rfy-navy) !important;
+}
+
 /* Menu panel - closed: nothing shows */
 .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu {
   min-width: 210px;
