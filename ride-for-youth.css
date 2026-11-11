@@ -3161,3 +3161,86 @@ html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu >
 .rfy-terms-label a:focus {
   color: var(--rfy-red) !important;
 }
+/* ===== RESOURCES PAGE ON PHONES - section headings and download tiles ===== */
+@media (max-width: 767px) {
+
+  /* Section heading - icon and title on one line */
+  .lump-column:has(.fa-file-image) {
+    padding: 0 15px !important;
+  }
+  .lump-column:has(.fa-file-image) > .lump-container {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    gap: 12px;
+  }
+  .lump-column:has(.fa-file-image) .lump {
+    flex: 0 0 auto;
+    width: auto !important;
+    padding: 0 !important;
+  }
+  .lump-column:has(.fa-file-image) .lump:has(h2) {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .lump-column:has(.fa-file-image) .fa-file-image { font-size: 28px; }
+  html .lump-column:has(.fa-file-image) h2 {
+    margin: 0 !important;
+    font-size: 28px !important;
+    line-height: 1.15 !important;
+  }
+
+  /* Download tiles - two across with even gaps */
+  .lump-column:has(.lump-assets) {
+    padding: 20px 15px 44px !important;
+  }
+  .lump-column:has(.lump-assets) .lump { padding: 0 !important; }
+  .lump-assets > [id^="assets"] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 16px;
+  }
+  .lump-assets > [id^="assets"]::before,
+  .lump-assets > [id^="assets"]::after { display: none !important; }
+  .lump-assets .lump-asset {
+    float: none !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .lump-assets .asset-block {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .lump-assets .asset-block img {
+    width: 100% !important;
+    margin: 0 0 12px !important;
+  }
+  .lump-assets .asset-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 !important;
+  }
+
+  /* Title takes the spare height so the buttons in a row line up */
+  .lump-assets .asset-text .title {
+    flex: 1;
+    margin: 0 0 12px !important;
+    font-size: 17px !important;
+    line-height: 1.25 !important;
+  }
+  .lump-assets .asset-text .btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    height: 44px;
+    margin: 0 !important;
+    padding: 0 8px !important;
+    font-size: 14px !important;
+  }
+}
