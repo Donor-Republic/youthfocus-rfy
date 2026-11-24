@@ -3351,15 +3351,18 @@ html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu >
 }
 
 /* ===== STICKY HEADER - stays at the top and compresses once you scroll (needs the header script in Custom JS) ===== */
-.funraisin-header-wrapper {
+/* On fundraiser and team pages Funraisin puts the banner inside the header wrapper, so the nav itself is made sticky, not the wrapper */
+.funraisin-header-wrapper { display: contents !important; }
+.funraisin-desktop-nav,
+.funraisin-header-wrapper > .funraisin-header-nav {
   position: sticky;
   top: 0;
   z-index: 1000;
   background: #FFFFFF;
   transition: box-shadow 0.25s ease;
 }
-body.rfy-scrolled .funraisin-header-wrapper {
-  min-height: 0;
+body.rfy-scrolled .funraisin-desktop-nav,
+body.rfy-scrolled .funraisin-header-wrapper > .funraisin-header-nav {
   box-shadow: 0 4px 16px rgba(0, 55, 103, 0.12);
 }
 
