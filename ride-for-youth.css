@@ -3401,3 +3401,26 @@ body.rfy-scrolled .funraisin-header-wrapper > .funraisin-header-nav .funraisin-s
 @media (prefers-reduced-motion: reduce) {
   .funraisin-header-wrapper, .funraisin-header-wrapper * { transition: none !important; }
 }
+
+/* ===== LEADERBOARD PAGE (/leaderboard) - spacing only, card design unchanged ===== */
+
+/* Gap between each person or team */
+.lump-row:has(.leaderboardrow):not(.leaderboards-section) .leaderboardrow { margin: 0 0 12px !important; }
+.lump-row:has(.leaderboardrow):not(.leaderboards-section) .leaderboardrow:last-of-type { margin-bottom: 0 !important; }
+
+/* Remove the empty 40px spacer under each list (keeps a View more button if Funraisin adds one) */
+.lump-row:has(.leaderboardrow):not(.leaderboards-section) #Leaderboard .height-40,
+.lump-row:has(.leaderboardrow):not(.leaderboards-section) .lump_leaderboard_buttons:not(:has(a, button)) { display: none !important; }
+
+/* Less white space between Ride for Youth and Distance Leaderboard */
+.lump-row:has(.leaderboardrow):not(.leaderboards-section) > .container { padding: 48px 0 0 !important; }
+.lump-row:has(.leaderboardrow):not(.leaderboards-section):not(:has(+ .lump-row .leaderboardrow)) > .container { padding-bottom: 64px !important; }
+.lump-row:has(.leaderboardrow):not(.leaderboards-section) .lump-column { padding-top: 8px !important; padding-bottom: 8px !important; }
+.lump-row:has(.leaderboardrow):not(.leaderboards-section) .lump-column > .lump-container > .lump { padding-top: 0 !important; padding-bottom: 0 !important; }
+
+/* Phones - Individuals and Teams stack, so tighten the gap between them too */
+@media (max-width: 767px) {
+  .lump-row:has(.leaderboardrow):not(.leaderboards-section) > .container { padding: 24px 15px 0 !important; }
+  .lump-row:has(.leaderboardrow):not(.leaderboards-section):not(:has(+ .lump-row .leaderboardrow)) > .container { padding-bottom: 40px !important; }
+  .lump-row:has(.leaderboardrow):not(.leaderboards-section) .leaderboardrow { margin-bottom: 10px !important; }
+}
