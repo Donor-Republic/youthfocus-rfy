@@ -3349,3 +3349,55 @@ html .funraisin-secondary-nav .funraisin-dropdown-nav .funraisin-dropdown-menu >
     translate: none !important;
   }
 }
+
+/* ===== STICKY HEADER - stays at the top and compresses once you scroll (needs the header script in Custom JS) ===== */
+.funraisin-header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #FFFFFF;
+  transition: box-shadow 0.25s ease;
+}
+body.rfy-scrolled .funraisin-header-wrapper {
+  min-height: 0;
+  box-shadow: 0 4px 16px rgba(0, 55, 103, 0.12);
+}
+
+/* Desktop - smooth resize */
+.funraisin-desktop-nav .primary-nav-container { transition: padding 0.25s ease; }
+.funraisin-desktop-nav .site-logo img { height: 85px; width: auto; transition: height 0.25s ease; }
+.funraisin-desktop-nav .funraisin-primary-nav { transition: margin 0.25s ease; }
+.funraisin-desktop-nav .funraisin-secondary-nav a.btn-primary,
+.funraisin-desktop-nav .funraisin-secondary-nav a.btn-secondary {
+  transition: height 0.25s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Desktop - compressed (127px down to 89px) */
+body.rfy-scrolled .funraisin-desktop-nav .primary-nav-container { padding: 8px 0 !important; }
+body.rfy-scrolled .funraisin-desktop-nav .site-logo img { height: 56px; }
+body.rfy-scrolled .funraisin-desktop-nav .funraisin-primary-nav { margin-top: 4px !important; }
+body.rfy-scrolled .funraisin-desktop-nav .funraisin-secondary-nav a.btn-primary,
+body.rfy-scrolled .funraisin-desktop-nav .funraisin-secondary-nav a.btn-secondary { height: 38px; }
+
+/* Mobile - smooth resize */
+.funraisin-header-wrapper > .funraisin-header-nav .primary-nav-container { transition: padding 0.25s ease; }
+.funraisin-header-wrapper > .funraisin-header-nav .site-logo img { height: 69px; width: auto; transition: height 0.25s ease; }
+.funraisin-header-wrapper > .funraisin-header-nav .funraisin-secondary-nav,
+.funraisin-header-wrapper > .funraisin-header-nav .funraisin-secondary-nav ul.nav { transition: margin 0.25s ease, padding 0.25s ease; }
+.funraisin-header-wrapper > .funraisin-header-nav .funraisin-secondary-nav a.btn {
+  transition: height 0.25s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Mobile - compressed (179px down to 96px), Donate and Sign up stay visible */
+body.rfy-scrolled .funraisin-header-wrapper > .funraisin-header-nav .primary-nav-container { padding: 6px 0 !important; }
+body.rfy-scrolled .funraisin-header-wrapper > .funraisin-header-nav .site-logo img { height: 44px; }
+body.rfy-scrolled .funraisin-header-wrapper > .funraisin-header-nav .funraisin-secondary-nav { margin-top: 4px !important; }
+body.rfy-scrolled .funraisin-header-wrapper > .funraisin-header-nav .funraisin-secondary-nav ul.nav { padding: 0 0 2px !important; }
+body.rfy-scrolled .funraisin-header-wrapper > .funraisin-header-nav .funraisin-secondary-nav li { padding-top: 0 !important; padding-bottom: 0 !important; }
+body.rfy-scrolled .funraisin-header-wrapper > .funraisin-header-nav .funraisin-secondary-nav a.btn-primary,
+body.rfy-scrolled .funraisin-header-wrapper > .funraisin-header-nav .funraisin-secondary-nav a.btn-secondary { height: 34px; font-size: 14px !important; }
+
+/* Less motion - resize instantly */
+@media (prefers-reduced-motion: reduce) {
+  .funraisin-header-wrapper, .funraisin-header-wrapper * { transition: none !important; }
+}
