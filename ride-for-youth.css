@@ -754,7 +754,8 @@ html #popup .BtClose { border-radius: 50px !important; padding: 0; }
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: clamp(32px, 4vw, 46px) !important;
+  margin-top: clamp(32px, 4vw, 20px) !important;
+   margin-bottom: 15px;
 }
 .rfy-footer__flags img {
   display: block;
